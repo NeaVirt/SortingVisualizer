@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sorting visualizer</title>
+        <link rel="stylesheet" href="sorting.css">
+    </head>
+    <body>
+        <h1 id="head">Sorting Visualizer</h1>
+        <div id="visualizer"></div>
+        <div id="controls">
+        <button id="bubbleSortButton">Bubble Sort</button>
+        <button id="insertionSortButton">Insertion Sort</button>
+        </div>
+       <script src="sortingVisualizer.js">
+
+       </script>
+    <script>
+        const visualizer =document.getElementById('visualizer');
+        const bubbleSortButton = document.getElementById('bubbleSortButton');
+        const insertionSortButton = document.getElementById('insertionSortButton');
+
+        const sv = new SortingVisualizer(10,visualizer);
+        bubbleSortButton.addEventListener('click', () => {
+            sv.startSorting('bubble'); 
+        });
+
+        insertionSortButton.addEventListener('click', () => {
+            sv.startSorting('insertion');
+        });
+    </script>
+    </body>
+</html>
